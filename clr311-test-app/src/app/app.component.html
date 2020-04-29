@@ -1,10 +1,217 @@
 
 <div id="page">
 
-<h1>Clarity 3.1.1 Test Page</h1>
-
-<hr/> 
-
-
-
-</div><!-- page-->
+    <h1>Clarity 3.1.1 Test Page</h1>
+    <h2>Alerts</h2>
+    
+    <h3>Small Alert</h3>
+    <clr-alert [clrAlertSizeSmall]="true">
+        <clr-alert-item>
+            <span class="alert-text">
+                This is a small alert.
+            </span>
+        </clr-alert-item>
+    </clr-alert>
+    
+    <h3>Regular Alert</h3>
+    <clr-alert>
+        <clr-alert-item>
+            <span class="alert-text">
+                This is a regular alert.
+            </span>
+        </clr-alert-item>
+    </clr-alert>
+    
+    <h3>Success Alert</h3>
+    <clr-alert [clrAlertType]="'success'">
+        <clr-alert-item>
+            <span class="alert-text">
+                This alert indicates success.
+            </span>
+        </clr-alert-item>
+    </clr-alert>
+    
+    <h3>Default Info Alert</h3>
+    <clr-alert>
+        <clr-alert-item>
+            <span class="alert-text">
+                This is a default info alert.
+            </span>
+        </clr-alert-item>
+    </clr-alert>
+    
+    <h3>Alert that cannot be closed</h3>
+    <clr-alert [clrAlertClosable]="false">
+      <clr-alert-item>
+          <span class="alert-text">
+              This alert cannot be dismissed.
+          </span>
+      </clr-alert-item>
+    </clr-alert>
+    
+    <h3>App Level Alert</h3>
+    <clr-alert [clrAlertType]="'danger'" [clrAlertAppLevel]="true">
+        <clr-alert-item>
+            <span class="alert-text">
+                This is an app level alert.
+            </span>
+            <div class="alert-actions">
+                <button class="btn alert-action">Fix</button>
+            </div>
+        </clr-alert-item>
+    </clr-alert>
+    
+    <h3>Alerts with pager control</h3>
+    <clr-alerts>
+      <clr-alert [clrAlertType]="'info'" [clrAlertAppLevel]="true">
+          <clr-alert-item>
+          <span class="alert-text">
+              Disk needs optimization
+          </span>
+          <div class="alert-actions">
+              <button class="btn alert-action">Fix</button>
+          </div>
+      </clr-alert-item>
+      </clr-alert>
+      <clr-alert [clrAlertType]="'danger'" [clrAlertAppLevel]="true">
+          <clr-alert-item>
+          <span class="alert-text">
+              DNS needs to be flushed
+          </span>
+          <div class="alert-actions">
+              <button class="btn alert-action">Fix</button>
+          </div>
+      </clr-alert-item>
+    </clr-alert>
+    </clr-alerts>
+    
+    <hr/> 
+    
+    <h2>Dropdown</h2>
+    
+    <clr-dropdown [clrCloseMenuOnItemClick]="false">
+        <button clrDropdownTrigger>
+          Open Dropdown
+          <clr-icon shape="caret down"></clr-icon>
+        </button>
+        <clr-dropdown-menu *clrIfOpen>
+            <label class="dropdown-header" aria-hidden="true">Dropdown header</label>
+            <div aria-label="Dropdown header Action 1" clrDropdownItem>Action 1</div>
+            <div aria-label="Dropdown header Action 2"  clrDropdownItem>Action 2</div>
+            <div class="dropdown-divider" role="separator" aria-hidden="true"></div>
+            <div clrDropdownItem>Link 1</div>
+            <div clrDropdownItem>Link 2</div>
+        </clr-dropdown-menu>
+    </clr-dropdown>
+    
+    
+    <hr/> 
+    
+    <h2>Modal</h2>
+    <button class="btn btn-primary" (click)="basic = true">Show modal</button>
+    
+    <clr-modal [(clrModalOpen)]="basic">
+        <h3 class="modal-title">I have a nice title</h3>
+        <div class="modal-body">
+            <p>But not much to say...</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline" (click)="basic = false">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="basic = false">Ok</button>
+        </div>
+    </clr-modal>
+    
+    
+    <hr/> 
+    
+    <h2>Stack View</h2>
+    
+    <h3>Basic Stack View</h3>
+    <clr-stack-view>
+        <clr-stack-header>Angular stack view</clr-stack-header>
+    
+        <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="3" [clrStackViewPosinset]="1">
+            <clr-stack-label>Label 1</clr-stack-label>
+            <clr-stack-content>Content 1</clr-stack-content>
+        </clr-stack-block>
+    
+        <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="3" [clrStackViewPosinset]="2">
+            <clr-stack-label>Label 2</clr-stack-label>
+            <clr-stack-content>Content 2</clr-stack-content>
+            <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="3" [clrStackViewPosinset]="1">
+                <clr-stack-label>Sub-label 1</clr-stack-label>
+                <clr-stack-content>Sub-content 1</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="3" [clrStackViewPosinset]="2">
+                <clr-stack-label>Sub-label 2</clr-stack-label>
+                <clr-stack-content>Sub-content 2</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="3" [clrStackViewPosinset]="3">
+                <clr-stack-label>Sub-label 3</clr-stack-label>
+                <clr-stack-content>Sub-content 3</clr-stack-content>
+            </clr-stack-block>
+        </clr-stack-block>
+    
+        <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="3" [clrStackViewPosinset]="3">
+            <clr-stack-label>Label 3</clr-stack-label>
+            <clr-stack-content>Content 3</clr-stack-content>
+            <clr-stack-block>
+                <clr-stack-label>Sub-label 4</clr-stack-label>
+                <clr-stack-content>Sub-content 4</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Sub-label 5</clr-stack-label>
+                <clr-stack-content>Sub-content 5</clr-stack-content>
+            </clr-stack-block>
+        </clr-stack-block>
+    </clr-stack-view>
+    
+    <h3>Lazy Loading Stack View</h3>
+    
+    <clr-stack-view>
+        <clr-stack-header>
+            Lazily loaded children
+            <button class="stack-action btn btn-sm btn-link" (click)="resetChildren()" type="button">Reset</button>
+        </clr-stack-header>
+    
+        <clr-stack-block
+            #lazyBlock
+            [clrSbExpandable]="true"
+            (clrSbExpandedChange)="fetchChildren()"
+            [clrStackViewLevel]="1"
+            [clrStackViewSetsize]="2"
+            [clrStackViewPosinset]="1"
+            >
+            <clr-stack-label>Label 1</clr-stack-label>
+            <clr-stack-content>Content 1</clr-stack-content>
+    
+            <clr-stack-block *ngIf="children.length == 0" [clrStackViewLevel]="2" [clrStackViewSetsize]="0" [clrStackViewPosinset]="1">
+                <clr-spinner clrAssertive clrInline>
+                  Loading...
+                </clr-spinner>
+            </clr-stack-block>
+    
+            <clr-stack-block
+                *ngFor="let child of children; let i = index"
+                [clrStackViewLevel]="2"
+                [clrStackViewSetsize]="children.length"
+                [clrStackViewPosinset]="i + 1"
+                >
+                <clr-stack-label>{{child.title}}</clr-stack-label>
+                <clr-stack-content>{{child.content}}</clr-stack-content>
+            </clr-stack-block>
+        </clr-stack-block>
+    
+        <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="2" [clrStackViewPosinset]="2">
+            <clr-stack-label>Label 2</clr-stack-label>
+            <clr-stack-content>Content 2</clr-stack-content>
+        </clr-stack-block>
+    </clr-stack-view>
+    
+    <h3>Stack View Modal Editor</h3>
+    
+    
+    
+    
+    </div><!-- page-->
+    
