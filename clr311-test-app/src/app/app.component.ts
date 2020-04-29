@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { ClrStackBlock } from '@clr/angular';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -34,6 +35,8 @@ export class AppComponent {
       ];
     }, 2000);
   }
+
+  
    
     resetChildren(): void {
       this.lazyBlock.expanded = false;
@@ -41,6 +44,26 @@ export class AppComponent {
 
       
     }
+
+
+    
+    //Modal edit demo
+  
+  blocks: any[] = [
+    { title: 'Label 1', content: 'Content 1' },
+    {
+      title: 'Label 2',
+      content: 'Content 2',
+      children: [
+        { title: 'Sub-label 1', content: 'Sub-content 1' },
+        { title: 'Sub-label 2', content: 'Sub-content 2' },
+        { title: 'Sub-label 3', content: 'Sub-content 3' },
+      ],
+    },
+    { title: 'Label 3', content: 'Content 3' },
+  ];
+
+  editModal = false;
      //end stack view
   
 
