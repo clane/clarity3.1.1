@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'clr311-test-app';
+
+  expanded = false;
+  basic = true;
+
+ 
+
 }
