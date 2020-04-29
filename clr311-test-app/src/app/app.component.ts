@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { ClrStackBlock } from '@clr/angular';
-import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -65,8 +65,30 @@ export class AppComponent {
 
   editModal = false;
      //end stack view
-  
 
+  //overflow tabs
+  inOverflow = true;
+  
+//Begin Timeline 
+  props = [
+    {
+      name: '[clrLayout]',
+      values: "'horizontal' | 'vertical'",
+      defaultValue: "'horizontal'",
+      description: "Define if the timeline shall be 'horizontal' or 'vertical'",
+    },
+  ];
+
+  stepProps = [
+    {
+      name: '[clrState]',
+      values: 'ClrTimelineStepState',
+      defaultValue: 'NOT_STARTED',
+      description: 'Define the symbol (icon or spinner) to use to decorate the step',
+    },
+  ];
+
+  //End Timeline 
  
 
 }
