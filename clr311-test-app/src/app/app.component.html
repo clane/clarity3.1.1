@@ -89,6 +89,26 @@
 
 <hr/> 
     
+
+<h2>Dropdown</h2>
+
+<clr-dropdown [clrCloseMenuOnItemClick]="false">
+    <button clrDropdownTrigger>
+      Open Dropdown
+      <clr-icon shape="caret down"></clr-icon>
+    </button>
+    <clr-dropdown-menu *clrIfOpen>
+        <label class="dropdown-header" aria-hidden="true">Dropdown header</label>
+        <div aria-label="Dropdown header Action 1" clrDropdownItem>Action 1</div>
+        <div aria-label="Dropdown header Action 2"  clrDropdownItem>Action 2</div>
+        <div class="dropdown-divider" role="separator" aria-hidden="true"></div>
+        <div clrDropdownItem>Link 1</div>
+        <div clrDropdownItem>Link 2</div>
+    </clr-dropdown-menu>
+</clr-dropdown>
+
+
+<hr/> 
     
-    </div><!-- page-->
+</div><!-- page-->
     
