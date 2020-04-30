@@ -7,7 +7,10 @@ import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
 
 
-const routes: Routes = []; // sets up routes constant where you define your routes
+const routes: Routes = [
+  { path: 'first', component: FirstComponent },
+  { path: 'second', component: SecondComponent },
+];
 
 // configures NgModule imports and exports
 @NgModule({
