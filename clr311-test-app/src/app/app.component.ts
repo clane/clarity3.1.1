@@ -85,7 +85,7 @@ export class AppComponent  implements OnInit, OnDestroy {
   //End Timeline 
 
   //Begin Vertical Nav
-
+  collapsed;
   
 
   //End Vertical Nav

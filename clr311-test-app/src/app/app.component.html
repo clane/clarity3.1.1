@@ -443,18 +443,32 @@
 <hr/>
 
 <h2>Vertical Nav</h2>
-i<h3>Basic Structure</h3>
+<h3>Basic Structure, Icons Links, Collapsable </h3>
 
-<div id="verticalNavWrapper">
-    <clr-vertical-nav>
+<div class="verticalNavWrapper">
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed">
         <a clrVerticalNavLink routerLink="./first" routerLinkActive="active">first</a>
         <a clrVerticalNavLink routerLink="./second" routerLinkActive="active">second</a>
-    
+        <a clrVerticalNavLink routerLink="./first" routerLinkActive="active">
+            <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
+            first
+        </a>
+        <a clrVerticalNavLink routerLink="./second" routerLinkActive="active">
+            <clr-icon clrVerticalNavIcon shape="bolt"></clr-icon>
+            second
+        </a>
     </clr-vertical-nav>
     <div class="content-area">
         <router-outlet></router-outlet>
     </div>
-</div>
+</div><!-- end verticalNavWrapper -->
+
+
+
+
+
+
+
 <hr/>
 
 </div><!-- page-->
