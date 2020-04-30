@@ -1,2 +1,4 @@
 #page { width:80%; margin: auto; }
 hr { height: 3px;  background:#ccc; margin-top:2rem; margin-bottom:2rem;  }
+#verticalNavWrapper { width:40%; display:flex; }
+.content-area { padding:2rem; }

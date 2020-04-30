@@ -443,18 +443,18 @@
 <hr/>
 
 <h2>Vertical Nav</h2>
+i<h3>Basic Structure</h3>
 
-<clr-vertical-nav>
-    <a clrVerticalNavLink routerLink="./first" routerLinkActive="active">first</a>
-    <a clrVerticalNavLink routerLink="./second" routerLinkActive="active">second</a>
-  
-</clr-vertical-nav>
-<div class="content-area">
-    <router-outlet></router-outlet>
+<div id="verticalNavWrapper">
+    <clr-vertical-nav>
+        <a clrVerticalNavLink routerLink="./first" routerLinkActive="active">first</a>
+        <a clrVerticalNavLink routerLink="./second" routerLinkActive="active">second</a>
+    
+    </clr-vertical-nav>
+    <div class="content-area">
+        <router-outlet></router-outlet>
+    </div>
 </div>
-
-
-
 <hr/>
 
 </div><!-- page-->
