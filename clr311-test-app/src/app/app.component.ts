@@ -1,7 +1,8 @@
 import { Component, ViewChild, OnDestroy, OnInit } from '@angular/core';
 import { ClrStackBlock } from '@clr/angular';
-import { Subscription } from 'rxjs';
-import { ActivatedRoute, NavigationEnd, Route, Router } from '@angular/router';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+
 
 @Component({
   selector: 'app-root',
